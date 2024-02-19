@@ -1,0 +1,35 @@
+<!-- Joshua Kelbley : Assignment 9.3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSD 340 Web Development with HTML and CSS</title>
+	<meta http-equiv="author" content="Joshua Kelbley" />
+	<meta name="description" content="Assignment 9.3 for CSD-340" />
+	<meta name="keywords" content="homework, asssignment 9.3" />
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<link href="C:\csd\csd-340\module-2\kelbley_mod2_2.css" type="text/css" rel="stylesheet" />
+	<script>
+		var variableOne = "A stick.";
+		var variableTwo = "Grass, I lied about the flies.";
+		var variableThree = "Ouch!";
+		var variableFour = "Eaten."; 
+	</script>
+</head>
+
+<body>
+	<div id="container">
+		<h1>Assignment 9.3: JavaScript - Part 1</h1>
+		<p>What is brown and sticky? <span id = "stick">__1__</span></p>
+		<p>What is green and flies? <span id = "grass">__2__</span></p>
+		<p>A man walks into a bar. <span id = "ouch">__3__</span></p>
+		<p>If the early bird gets the worm, what does the worm get? <span id = "eat">__4__</span></p>
+		<p>
+			<button type="button" onclick="document.getElementById('stick').innerHTML = variableOne">1</button>
+			<button type="button" onclick="document.getElementById('grass').innerHTML = variableTwo">2</button>
+			<button type="button" onclick="document.getElementById('ouch').innerHTML = variableThree">3</button>
+			<button type="button" onclick="document.getElementById('eat').innerHTML = variableFour">4</button>
+		</p>
+	</div>
+</body>
+</html>
