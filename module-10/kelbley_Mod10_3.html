@@ -1,0 +1,56 @@
+<!-- Joshua Kelbley : Assignment 9.3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSD 340 Web Development with HTML and CSS</title>
+	<meta http-equiv="author" content="Joshua Kelbley" />
+	<meta name="description" content="Assignment 10.3 for CSD-340" />
+	<meta name="keywords" content="homework, asssignment 10.3" />
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<script>
+		function originalImg(){
+			document.getElementById('image').src = "img1.jpg";
+		}
+		
+		function altImg(){
+			document.getElementById('image').src = "img2.jpg";
+		}
+		
+		function clickEvent(){
+			var text = document.getElementById('click');
+			text.innerText = "You Clicked the Image!";
+			text.style.color = "purple";
+			text.style.fontSize = "30px";
+		}
+		
+		function originalText(){
+			var text = document.getElementById('text');
+			text.innerText = "This shows onmouseover and onmouseout for text.";
+			text.style.color = "black";
+			text.style.fontSize = "16px";
+		}
+		
+		function altText(){
+			var text = document.getElementById('text');
+			text.innerText = "It changed!";
+			text.style.color = "orange";
+			text.style.fontSize = "25px";
+		}
+	</script>
+</head>
+
+<body>
+	<div id = "container">
+		<br>
+		<img id = "image" src="img1.jpg" onmouseover = "altImg()" onmouseout = "originalImg()" onclick = "clickEvent()" alt = "Original Image">
+		<p id = "click"></p>
+		<br>
+		<p>Above shows the onmouseover and onmouseout for an image. If clicked it also shows the onclick event.</p>
+		<br>
+		<p id = "text" onmouseover = "altText()" onmouseout = "originalText()">
+			This shows onmouseover and onmouseout for text.
+		</p>
+	</div>
+</body>
+</html>
