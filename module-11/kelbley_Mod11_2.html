@@ -1,0 +1,61 @@
+<!-- Joshua Kelbley : Assignment 11.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSD 340 Web Development with HTML and CSS</title>
+	<meta http-equiv="author" content="Joshua Kelbley" />
+	<meta name="description" content="Assignment 11.2 for CSD-340" />
+	<meta name="keywords" content="homework, asssignment 11.2" />
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<script>
+		var items = new Array();
+		var list = "";3
+		
+		function add(){
+			document.getElementById("displayItems").innerHTML = "";
+			var input = document.getElementById("item").value;
+			items.push(input);
+			document.getElementById("item").value = "";
+		}
+
+		function remove(){
+			var input = parseInt(document.getElementById("item").value);
+			document.getElementById("displayItems").innerHTML = "";
+			var numCheck = typeof input;
+			if(numCheck === "number" && input <= items.length){
+				items.splice((input - 1), 1);
+				document.getElementById("item").value = "";
+			}
+			else{
+				document.getElementById("displayItems").innerHTML = "The inputed value was invalid.";
+			}
+		}
+	
+		function display(){
+			if(items.length == 0){
+				document.getElementById("displayItems").innerHTML = "There have been no inputed items.";
+			}
+			else{
+				var elements = "";
+				for(var x = 0; x < items.length; x++){
+					elements += "Item " + (x + 1) + ": " + items[x] + "<br>"
+				}
+				document.getElementById("displayItems").innerHTML = elements;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Assignment 11.2: JavaScript - Part 3</h1>
+	<p>This is an interactive list<br>To add an item, enter it in the text box and click "Add an Entry".<br>To remove and entry, enter the item number in the text box then click "Remove an Entry".<br>To display the entries, click "Display Entries".
+	<br>
+	<br>
+	<input type="text" id="item" name="item">
+	<button name = "add" onclick="add()">Add an Entry</button>
+	<button name = "remove" onclick="remove()">Remove an Entry</button>
+	<button name = "display" onclick="display()">Display Entries</button>
+	<br>
+	<br>
+	<p id = "displayItems"></p>
+</body>
