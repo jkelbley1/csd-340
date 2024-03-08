@@ -1,0 +1,82 @@
+<!-- Joshua Kelbley : Assignment 12.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSD 340 Web Development with HTML and CSS</title>
+	<meta http-equiv="author" content="Joshua Kelbley" />
+	<meta name="description" content="Assignment 12.2 for CSD-340" />
+	<meta name="keywords" content="homework, asssignment 12.2" />
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<link rel="stylesheet" href="kelbley_Mod12_2.css"/>
+
+	<script>
+		var books = new Array("The Hunger Games", "Catching Fire", "Mockingjay", "I'm Glad My Mom Died", "Ruination", "Rising World", "The Rising World Company", "The Tower and the Fox", "The Demon and the Fox", "The War and the Fox");
+		
+		function ascending(){
+			var listTemp = "<ol>";
+			document.getElementById("list").innerHTML = "";
+			
+			for(var x = 0; x < books.length; x++){
+				listTemp += "<li>" + books[x] + "</li>"
+			}
+			document.getElementById("list").innerHTML = listTemp;
+			listTemp += "</ol>";
+		}
+
+		function descending(){
+			var listTemp = "<ol reversed>";
+			document.getElementById("list").innerHTML = "";
+			
+			for(var x = books.length - 1; x >= 0; x--){
+				listTemp += "<li>" + books[x] + "</li>"
+			}
+			document.getElementById("list").innerHTML = listTemp;
+			listTemp += "</ol>";
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<div id="container">
+		<h1>Assignment 12.2: JavaScript - Part 4</h1>
+		<div class = "middle">
+			<div class = "left">
+				<h3>Top 10 Favorite Books</h3>
+				<hr>
+				<button type="button" onclick="ascending()" class = "ascendingBtn">Top to Bottom</button>
+				<button type="button" onclick="descending()">Bottom to Top</button>
+				<span id = "list">
+					<ol>
+						<li>The Hunger Games</li>
+						<li>Catching Fire</li>
+						<li>Mockingjay</li>
+						<li>I'm Glad My Mom Died</li>
+						<li>Ruination</li>
+						<li>Rising World</li>
+						<li>The Rising World Company</li>
+						<li>The Tower and the Fox</li>
+						<li>The Demon and the Fox</li>
+						<li>The War and the Fox</li>
+					</span>
+				</ol>
+			</div>
+			<div class = "right">
+				<h3>5 Things I’ve Learned Since the Course Started</h3>
+				<ul>
+					<li>Unordered/Ordered Lists</li>
+					<li>CSS</li>
+					<li>Using Hyperlinks</li>
+					<li>Headers</li>
+					<li>Basic HTML</li>
+				</ul>
+			</div>
+		</div>
+		<div class = "bottom">
+			<a href="https://jkelbley1.github.io/csd-340/">Index</a>
+		</div>
+	</div>
+</body>
+</html>
